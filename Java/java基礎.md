@@ -52,3 +52,69 @@ puts(a * 2)
 }
 ```
 
+## javaの配列
+**格納する要素の数を最初に決める必要があり、かつ後で要素数を変更することができない**  
+
+要素を増やす場合、**ArrayLis**tというリストの一種を使用する必要がある。
+## ArrayListとは
+- 要素の数を変更できる配列
+- 要素を動的に追加・削除できる
+- javaの標準ライブラリの一部のため、直接使うにはインポートしてプログラムに存在を知らせる必要がある
+
+
+```
+import java.util.ArrayList; //インポートをしてArrayListを知らせる
+
+class Main {
+  public static void main(String[] args) {
+    ArrayList<Integer> scores = new ArrayList<Integer>();
+
+    scores.add(1);
+    scores.add(5);
+
+    System.out.println(scores.get(0));　// 出力は　1
+    System.out.println(scores.get(1));　// 出力は　5
+   
+  }
+}
+```
+
+## ArrayListを使った配列の使い方
+① ライブラリをインポートする  
+
+
+ArrayListを使用する際は、ライブラリのインポートが必要  
+
+`import java.util.ArrayList;`  
+
+② ArrayListの宣言を行う  
+
+`ArrayList<Integer> scores = new ArrayList<Integer>();`  
+
+- 整数（Integer）を格納するArrayListを「scores」という名称で宣言
+- ArrayListの要素を作成。　　` new ArrayList<>();`←省略も可能。
+  
+③ ArrayListに値を代入する
+
+addメソッドで1を追加  
+
+`scores.add(1);`  
+
+④ ArrayListから要素を取り出す  
+
+get()で要素を取り出します。  
+
+`scores.get(0)`  
+
+
+
+
+
+
+
+
+
+
+
+
+
