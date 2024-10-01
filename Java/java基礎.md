@@ -107,12 +107,58 @@ get()で要素を取り出します。
 `scores.get(0)`  
 
 
+# 条件分岐
+```
+class Main {
+  public static void main(String[] args) {
+    int value = 3;
+
+    if (value > 0){
+      System.out.println("値は正です"); 
+    }else if (value < 0){
+      System.out.println("値は負です"); 
+    }else {
+      System.out.println("値は0です"); 
+    }
+  }
+}
+```
+if文の定義はrubyとよく似ている。 
+Rubyでの記述方法と異なるのは以下の点です。
+
+・条件式を（）で囲む
+・行いたい処理を{}で囲む
+
+# 繰り返し処理 （拡張for文）
+```
+class Main {
+  public static void main(String[] args) {
+    int[] scores = {1, 5, 10};
+
+    for(int score : scores) {
+      System.out.println(score);  //1 5 10 が出力される
+    }
+  }
+}
+```
+
+拡張for文のコードの定義は以下になります。
+```
+for ( 要素を格納する変数宣言  :  配列あるいはArrayListの変数名) {
+  取り出した要素を使用して行う処理
+}
+```
+
+上記のコードを参照すると  
+
+① 配列から要素を1つ取り出す（ArrayListの場合も同様)
 
 
+② 取り出した要素を変数に代入する  
 
+③ {}内の処理を行う  
 
-
-
+④ 配列、あるいはArrayListの要素数分だけ処理を繰り返す  
 
 
 
