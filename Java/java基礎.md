@@ -210,7 +210,58 @@ class Main {
 
 `sayHello`メソッド名    
 
+1.返り値のデータ型を指定する　  
+Javaのメソッド定義では、返り値のデータ型を指定する必要がある。  
 
+例えば、「return 1;」といったように返り値が整数型であれば、メソッド名の前に「int」と記述します。  
+
+```
+  public static int num() {  //返り値がintであることを記述する。
+return1;                      //返り値が無ければvoid
+}
+```
+2.引数がないメソッドでも（）は省略できない
+
+
+# アクセス修飾子  
+ 
+修飾子とは？  
+Javaのプログラムでは、クラス、メソッド、変数といった要素を定義します。この時、それぞれの要素に特別な機能を付与するために使うのが修飾子です  
+
+アクセス修飾子とは?     
+外部への公開範囲を設定で『public・protected・private』と３種類あります。    
+
+private:宣言されたクラス内からのみアクセスできます。外部から直接アクセスすることはできない。
+public :どのクラスからでもアクセスができる  
+` public static void sayHello()` 
+
+  〜まとめ〜　　
+ - Javaのアクセス修飾子は、要素へのアクセスを制御する重要な機能です。  
+ - publicは自由にアクセスでき、privateはクラス内でのみアクセスできます。  
+ - Rubyのprivateメソッドと同様に、クラス内部で利用するためのメソッドを定義する際に使用されます。
+
+# static修飾子  
+staticは「静的」という意味  = 静的とは、状態が変化しないことを意味  
+メソッドの定義の際に、staticをつけることで「静的メソッド」として定義されます。
+静的メソッドは『クラスメソッド』ともいう。 
+
+` public static void sayHello()` 
+
+staticを付けない場合は、「インスタンスメソッド」として定義されます。
+
+## メソッドがある引数  
+```
+class Main {
+  public static void main(String[] args) {
+    var answer = square(5);
+    System.out.println(answer);  //出力　25
+  }
+
+  public static int square(int number){
+    return number * number;
+  }
+}
+```
 
 
 
