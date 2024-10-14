@@ -79,5 +79,36 @@ localhost:8080/
 
 
 
+# コントローラーを作成
+まずコードを記述するためのクラスファイルを新規作します。
+
+[![Image from Gyazo](https://i.gyazo.com/7f8ffc928e7b6ecbe38eac72ca228733.png)](https://gyazo.com/7f8ffc928e7b6ecbe38eac72ca228733)
+[![Image from Gyazo](https://i.gyazo.com/b94071f6f9dafc2ac2a0070dafd945b2.png)](https://gyazo.com/b94071f6f9dafc2ac2a0070dafd945b2)
+[![Image from Gyazo](https://i.gyazo.com/d6b8bc494c0b5464da3648341b9d24fd.png)](https://gyazo.com/d6b8bc494c0b5464da3648341b9d24fd)
+
+⚠️railsでコントローラの命名を行う際は、**PostsController**のように複数形にする規則がありましたが、Javaにはその規則はありません。
+
+‼️javaはコードの記述量が多くなりがちなので、IntelliJの補完機能等をうまく利用することが重要‼️  
+「@Controller」を入力している途中で、以下のように**補完用のウィンドウが開きます。**
+[![Image from Gyazo](https://i.gyazo.com/88797e735b1c8a967b5f2d0f52030392.png)](https://gyazo.com/88797e735b1c8a967b5f2d0f52030392)
 
 
+
+するとコード入力が補完され、以下の状態になります。 
+
+
+[![Image from Gyazo](https://i.gyazo.com/20b9dacad20e77dd2bd9044955c8c16a.png)](https://gyazo.com/20b9dacad20e77dd2bd9044955c8c16a)
+
+2つの行が追加されてました。 
+① 3行目にimport文が追加される 
+
+② 5行目の@Controllerという文字が補完される 
+
+このように、入力しようとしていた「@Controller」だけで、IntelliJの補完機能により自動でインポート分が入力される
+
+[![Image from Gyazo](https://i.gyazo.com/1c67a96700f1ba24b063921ff6d81c41.png)](https://gyazo.com/1c67a96700f1ba24b063921ff6d81c41)
+[![Image from Gyazo](https://i.gyazo.com/7698fcbfc37a93b058b52d0070d6d095.png)](https://gyazo.com/7698fcbfc37a93b058b52d0070d6d095)
+
+
+
+上記のように「/hello」というパスが指定されると「Hello World!」と表示するアプリができました
