@@ -227,6 +227,104 @@ Railsでは、ERBというテンプレートエンジンを使用して、コン
 ### Thymeleafで変数を使おう
 コントローラーからビューに変数を渡して表示させる方法について学習していきましょう。
 
-4行目と16・17行目を記述しました。
-[![Image from Gyazo](https://i.gyazo.com/99e64fae5e6de1197e0dce0c8336a1c3.png)](https://gyazo.com/99e64fae5e6de1197e0dce0c8336a1c3)
+4行目と15・16・17行目を記述しました。
+順番に説明していきます。
+[![Image from Gyazo](https://i.gyazo.com/1909b492baab1191b867d0e57d75c5a5.png)](https://gyazo.com/1909b492baab1191b867d0e57d75c5a5)
+
+Railsでコントローラーからビューに変数を渡す場合は、コントローラーでインスタンス変数に値を代入しました。
+
+【Ruby on Rails】
+
+
+[![Image from Gyazo](https://i.gyazo.com/40950c178116573af2311fa15c847f56.png)](https://gyazo.com/40950c178116573af2311fa15c847f56)
+
+
+Sping Bootの場合は、Model型のオブジェクトを使用して変数を受け渡します。
+
+Model型のオブジェクトとは、Spring Frameworkで用意されているオブジェクトで、**コントローラーからビューへデータを渡す**ことが主な役割です。
+
+以下の流れでコントローラーからビューへデータを受け渡します。
+
+### ① コントローラーの引数でModelオブジェクトを受け取る
+showHelloメソッドの仮引数に「Model model」と指定することで、Modelオブジェクトを受け取ることができます。このオブジェクトの変数名は、modelとすることが一般的です。
+
+これでshowHelloメソッド内でModelオブジェクトが使用できるようになります。
+
+
+
+
+
+
+[![Image from Gyazo](https://i.gyazo.com/95e98f7529cc6e093cd5c99361f6166d.png)](https://gyazo.com/95e98f7529cc6e093cd5c99361f6166d)
+
+
+>⚠️アノテーションと同様にModelオブジェクトの使用にはインポートが必要です。
+>クラス内で最初にModelを自動補完機能で記述した際は自動でインポート文が記述されますが、インポート`import >org.springframework.ui.Model;`が必要であることは覚えておきましょう。
+
+
+
+### ② Modelオブジェクトに、ビューで表示させたいデータを追加する
+【Modelにデータを追加】
+[![Image from Gyazo](https://i.gyazo.com/52a5bcd8c13e7ac3959c58447652583b.png)](https://gyazo.com/52a5bcd8c13e7ac3959c58447652583b)
+
+データの登録方法は、コントローラーで`model.addAttribute("key",value)`の形式で使用します。
+
+１つ目の引数の「key」は、**ビューからデータにアクセス**する際の名前を指します。
+
+
+ダブルクォーテーションで囲んで文字列として指定する必要があることに注意しましょう。
+
+
+>慣習として、valueと同名にするのが一般的です。
+
+
+>後からコードを読み返したときに、どのvalueがどのkeyに対応しているのかをわかりやすくするためです
+
+２つ目の引数の「value」は、その名前に関連づけられた**値（オブジェクト）** を指します。
+
+
+今回のケースでは、直前の行の`var sampleText = "サンプルテキスト";`の`sampleText`を指定しています。
+
+【まとめ】
+>keyがsampleText（ビュー側で呼び出す時の名前）
+
+>valueがsampleText（中身が”サンプルテキスト”の変数）
+
+>でmodelオブジェクトに保存した、という意味になります。
+
+
+
+
+### ③ ビューでModelオブジェクトのデータを読み込む
+`<p th:text="${sampleText}"></p>`
+
+これがThymeleafで変数を表示させる記述方法です。
+
+`th:text`はThymeleafで提供されている属性で、要素のテキスト内容を動的なデータに設定するために使用します
+
+`${}`は、Thymeleafの式言語の一部であり、括弧内の文字列を変数名として解釈し、その変数の値を取得します[![Image from Gyazo](https://i.gyazo.com/99e64fae5e6de1197e0dce0c8336a1c3.png)](https://gyazo.com/99e64fae5e6de1197e0dce0c8336a1c3)
+
+
+
+
+sampleText”というkeyで、sampleText変数を渡しました。
+
+sampleText変数には”サンプルテキスト”の文字列が入っています。
+
+"${sampleText}"で変数の値を取得し、要素内のテキストが置き換わります。
+
+結果として表示されるHTMLは`<p>サンプルテキスト</p>`となり、ブラウザが以下のように変わっていれば成功です！
+
+[![Image from Gyazo](https://i.gyazo.com/ff3263f0ab2ea994cd40af6ada1db1f6.png)](https://gyazo.com/ff3263f0ab2ea994cd40af6ada1db1f6)
+
+
+
+
+
+
+
+
+
+
+
 
