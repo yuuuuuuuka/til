@@ -142,7 +142,7 @@ skip_before_action :verify_authenticity_token`】
 
 
   ## 具体的な使い方
-  [![Image from Gyazo](https://i.gyazo.com/5c7358c586b68eae914b22f577b385b8.png)](https://gyazo.com/5c7358c586b68eae914b22f577b385b8)
+  [![Image from Gyazo](https://i.gyazo.com/ac5e2ec36ecdea200c3f993075f9c8a9.png)](https://gyazo.com/ac5e2ec36ecdea200c3f993075f9c8a9)
 
   このコードで３つの＠があります。
   - @Controller
@@ -208,7 +208,25 @@ Railsでは、ERBというテンプレートエンジンを使用して、コン
 [![Image from Gyazo](https://i.gyazo.com/630a138bf6f7972a8c902c6117a5003f.png)](https://gyazo.com/630a138bf6f7972a8c902c6117a5003f)
 [![Image from Gyazo](https://i.gyazo.com/97a283c1b4d6bf3a3b41ca66dfa9c99a.png)](https://gyazo.com/97a283c1b4d6bf3a3b41ca66dfa9c99a)
 
+続いて実際にThymeleafを使用していため2つの作業を行なっていきます。
+
+### ①表示させるためのHTMLを作成する
+
+「firstapp」「src」「main」「resources」フォルダにある「templates」フォルダを右クリックします。
+
+メニューの中から、「新規」「HTMLファイル」を選択して「hello.html」というファイルを作ります。
 
 
+[![Image from Gyazo](https://i.gyazo.com/3c53811cea00e063f9b81bf4a06b79d3.gif)](https://gyazo.com/3c53811cea00e063f9b81bf4a06b79d3)
 
+
+[![Image from Gyazo](https://i.gyazo.com/b61eef740859195b26ae69e204858aec.png)](https://gyazo.com/b61eef740859195b26ae69e204858aec)
+
+
+### ②コントローラーを変更
+### Thymeleafで変数を使おう
+コントローラーからビューに変数を渡して表示させる方法について学習していきましょう。
+
+4行目と16・17行目を記述しました。
+[![Image from Gyazo](https://i.gyazo.com/99e64fae5e6de1197e0dce0c8336a1c3.png)](https://gyazo.com/99e64fae5e6de1197e0dce0c8336a1c3)
 
