@@ -10,3 +10,19 @@ Javaでデータベースを利用することは少し難しいため、以下�
 
 
 
+FirstAppでは、以下のようにidカラムとmemoカラムのみを扱うシンプルなテーブルを作成します。
+
+id: 投稿ごとにつけるid
+
+memo：	投稿されたテキスト
+
+
+# 一覧表示機能の実装
+
+
+### 一覧表示用のビューを作成する
+##### ビューファイルの編集・作成
+[![Image from Gyazo](https://i.gyazo.com/73e8ea956f1580c3f8a9725dedc31cec.png)](https://gyazo.com/73e8ea956f1580c3f8a9725dedc31cec)
+
+
+
