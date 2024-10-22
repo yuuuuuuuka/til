@@ -178,5 +178,5 @@ th:eachを使うことで、まずpostListの１件目のデータが変数「po
 
 [![Image from Gyazo](https://i.gyazo.com/15345f17017fe584954acb750d097947.png)](https://gyazo.com/15345f17017fe584954acb750d097947)
 
-
+以上が、ントローラーで作成したリストをビューで表示することでした！
 
