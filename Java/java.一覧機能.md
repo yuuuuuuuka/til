@@ -152,4 +152,31 @@ List.ofメソッドは、文字通りリストを作成するメソッドです�
 PostEntityクラスのオブジェクトを３つ作成して、それらをList.ofメソッドによって１つのリストにまとめています。
 
 
+そして、作成したpostListをmodelに追加することでビューで使用できるようにしました。
+
+
+💡同じパッケージの中であれば、インポートせずにPostControllerを使うことができます
+
+### ビューを編集しよう
+2・9・10行目を以下のように編集しましょう！
+
+[![Image from Gyazo](https://i.gyazo.com/b216a42624e8da04b817625ca05e82fc.png)](https://gyazo.com/b216a42624e8da04b817625ca05e82fc)
+
+9行目の`<ul th:each="post:${postList}">`の`th:each`は繰り返し処理の機能です。
+
+`${postList}`の中には、コントローラーから渡されたリストの３件分の投稿データが含まれています。
+
+th:eachを使うことで、まずpostListの１件目のデータが変数「post」に格納されます。
+
+
+
+その状態で`<li th:text="${post.getMemo()}">`が実行されると実行結果が『投稿1』と表示されて繰り返される状態になります。
+
+ブラウザで確認すると以下の通りです。
+
+
+
+[![Image from Gyazo](https://i.gyazo.com/15345f17017fe584954acb750d097947.png)](https://gyazo.com/15345f17017fe584954acb750d097947)
+
+
 
