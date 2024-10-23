@@ -209,3 +209,85 @@ IntelliJでlombokを使用する場合、Lombokのアノテーションはデフ
 
 設定▶︎「プラグイン▶︎ lombok▶︎ インストール▶︎  適用
 [![Image from Gyazo](https://i.gyazo.com/73de8d5d1b59a4bec05166975576f3b9.gif)](https://gyazo.com/73de8d5d1b59a4bec05166975576f3b9)
+
+
+### データベースを作成しよう
+
+続いて、このアプリで使用するデータベースを作成します。
+
+
+この操作は**ターミナル**で行いますので、まずターミナルを起動しましょう。
+
+
+起動したら、以下のコマンドを実行します。
+
+
+`mysql -u root`
+
+MySQLが起動するので、以下のコマンドを実行しましょう。
+
+
+`mysql> create database first_app_java;`
+
+これで、「first_app_java」という名称のデータベースが作成されました。
+
+以下のコマンドで、MySQLを終了します
+
+`mysql>exit;`
+
+
+### javaアプリからMySQLを使うための設定
+
+「firstapp」「src」「main」「resources」フォルダにある「application.properties」ファイルで行います。
+
+2行目からのコードを記述しましょう
+[![Image from Gyazo](https://i.gyazo.com/efbc459ddadf1eb1ccfdd0c42a4848ff.png)](https://gyazo.com/efbc459ddadf1eb1ccfdd0c42a4848ff)
+
+
+ここまでで操作でデータベースは作成しました
+
+### テーブル作成
+
+
+続いて、データベース内のテーブルを作成していきます
+
+「schema.sql」ファイルを作成することで、アプリの起動時にSQLが発行され、テーブルを作成することができます。
+
+以下の内容のファイルを作成してコードを書きましょう
+
+>作成場所：src/main/resources
+>
+>種類：ファイル
+>
+>名前：schema.sql
+
+[![Image from Gyazo](https://i.gyazo.com/fa6973ae443aa080cf8aa7a121abb586.png)](https://gyazo.com/fa6973ae443aa080cf8aa7a121abb586)
+
+
+### アプリを実行してみよう！
+
+アプリを実行することによってschema.sqlが実行され、postsテーブルが作成されます。
+
+
+### テーブルにデータ追加しよう
+
+Sequel Proを使用して、テーブルにデータを追加します。
+
+まずはSequel Proを起動して、「first_app_java」のデータベースを開きましょう。
+
+postsテーブルが作成されているので、クリックして選択します。
+
+以下のデータをDBに記述していきます。
+
+
+>id:1	  memo:初めての投稿
+>
+>id:2   memo:2回目の投稿
+>
+>id:3	  memo:3回目の投稿
+
+[![Image from Gyazo](https://i.gyazo.com/5f5ddbd76a6bbcd11625f92833736f33.png)](https://gyazo.com/5f5ddbd76a6bbcd11625f92833736f33)
+
+
+続いて、Javaアプリからこのデータベースにアクセスし、データを取得できるようにしていきましょう。
+
