@@ -50,3 +50,5 @@ PostControllerを以下のように変更しましょう。
 いま作成したFormクラスをビューに渡すことによって、フォームの入力内容とFormクラスを関連づけます。
 
 
+
+PostControllerを変更しよう
