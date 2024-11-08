@@ -48,6 +48,7 @@ PostControllerを以下のように変更しましょう。
 
 ##  ②コントローラーを変更しよう
 いま作成したFormクラスをビューに渡すことによって、フォームの入力内容とFormクラスを関連づけます。
+src/main/java/in.techcamp.firstapp/PostController.java
 
 
 
