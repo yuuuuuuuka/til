@@ -55,3 +55,7 @@ src/main/java/in.techcamp.firstapp/PostController.java
 PostControllerを変更しよう
 
 [![Image from Gyazo](https://i.gyazo.com/eb0825b3048a4c02df7d0e7e568d0fff.png)](https://gyazo.com/eb0825b3048a4c02df7d0e7e568d0fff)
+
+いま変更したコードの、以下の箇所に注目しましょう。
+
+
