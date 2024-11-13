@@ -58,4 +58,6 @@ PostControllerを変更しよう
 
 いま変更したコードの、以下の箇所に注目しましょう。
 
+` public String showPostForm(@ModelAttribute("postForm") PostForm form`
+
 
