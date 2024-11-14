@@ -60,4 +60,4 @@ PostControllerを変更しよう
 
 ` public String showPostForm(@ModelAttribute("postForm") PostForm form`
 
-
+ここで@ModelAttributeというアノテーションを使用しています。このアノテーションを使用すると、任意のデータをModel型のオブジェクト内に格納することができます。
