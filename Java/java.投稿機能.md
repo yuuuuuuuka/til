@@ -61,3 +61,5 @@ PostControllerを変更しよう
 ` public String showPostForm(@ModelAttribute("postForm") PostForm form`
 
 ここで@ModelAttributeというアノテーションを使用しています。このアノテーションを使用すると、任意のデータをModel型のオブジェクト内に格納することができます。
+
+Spring Bootでは、このModel型のオブジェクトは特別な意味を持っており、データの一時保管場所のように活用することができます。
