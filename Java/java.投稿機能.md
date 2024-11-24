@@ -76,3 +76,5 @@ Spring Bootでは、このModel型のオブジェクトは特別な意味を持�
 `@ModelAttribute("呼び出すときの名称") 保存したい変数のデータ型　保存したい変数`
 
 今回は、以下のように使用しています。
+
+`@ModelAttribute("postForm") PostForm form`
