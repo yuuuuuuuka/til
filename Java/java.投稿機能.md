@@ -78,3 +78,6 @@ Spring Bootでは、このModel型のオブジェクトは特別な意味を持�
 今回は、以下のように使用しています。
 
 `@ModelAttribute("postForm") PostForm form`
+
+このコードによって、PostForm型の変数formを登録し、後で「postForm」という名称で呼び出すことができます。
+
