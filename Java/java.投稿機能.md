@@ -88,3 +88,5 @@ Spring Bootでは、このModel型のオブジェクトは特別な意味を持�
 
 以下の内容でファイルを新規作成しましょう。
 
+
+場所：src/main/resources/templates
