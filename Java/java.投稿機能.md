@@ -90,3 +90,8 @@ Spring Bootでは、このModel型のオブジェクトは特別な意味を持�
 
 
 場所：src/main/resources/templates
+
+
+種類：HTMLファイル
+
+
