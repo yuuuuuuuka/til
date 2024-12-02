@@ -95,3 +95,5 @@ Spring Bootでは、このModel型のオブジェクトは特別な意味を持�
 種類：HTMLファイル
 
 
+名称：postForm
+
